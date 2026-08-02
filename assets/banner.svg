@@ -1,173 +1,216 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#050811"/>
-      <stop offset="50%" stop-color="#0D1117"/>
-      <stop offset="100%" stop-color="#091428"/>
+    <linearGradient id="bg-main" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#020508"/>
+      <stop offset="30%" stop-color="#050D14"/>
+      <stop offset="70%" stop-color="#040B12"/>
+      <stop offset="100%" stop-color="#020508"/>
     </linearGradient>
-
-    <!-- Neon Cyan / Blue Gradients -->
-    <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00F0FF"/>
-      <stop offset="50%" stop-color="#7000FF"/>
+    <linearGradient id="title-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="50%" stop-color="#00F5FF"/>
+      <stop offset="100%" stop-color="#0099CC"/>
+    </linearGradient>
+    <linearGradient id="panel-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#03111E" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#020A14" stop-opacity="0.98"/>
+    </linearGradient>
+    <linearGradient id="bar-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00BFFF"/>
       <stop offset="100%" stop-color="#00F0FF"/>
     </linearGradient>
-
-    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="40%" stop-color="#00F0FF"/>
-      <stop offset="100%" stop-color="#8A2BE2"/>
+    <linearGradient id="bar-red" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF4444"/>
+      <stop offset="100%" stop-color="#FF6666"/>
     </linearGradient>
-
-    <!-- Glow Filters -->
-    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <linearGradient id="char-fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#020508" stop-opacity="0"/>
+      <stop offset="55%" stop-color="#020508" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#020508" stop-opacity="1"/>
+    </linearGradient>
+    <filter id="glow-title" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="b1"/>
+      <feGaussianBlur stdDeviation="18" result="b2"/>
+      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-
-    <filter id="glow-intense" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="12" result="blur2"/>
-      <feMerge>
-        <feMergeNode in="blur2"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="glow-soft" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-
-    <!-- Cyber Grid Pattern -->
-    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00F0FF" stroke-width="0.5" stroke-opacity="0.12"/>
-      <circle cx="40" cy="40" r="1" fill="#00F0FF" fill-opacity="0.3"/>
+    <filter id="glow-eye" x="-80%" y="-80%" width="360%" height="360%">
+      <feGaussianBlur stdDeviation="5" result="b1"/>
+      <feGaussianBlur stdDeviation="10" result="b2"/>
+      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="30" stroke="#0A2840" stroke-width="0.5" stroke-opacity="0.4"/>
+      <line x1="0" y1="0" x2="30" y2="0" stroke="#0A2840" stroke-width="0.5" stroke-opacity="0.4"/>
     </pattern>
-
-    <!-- Binary Code Overlay Pattern -->
-    <pattern id="binary-rain" width="100" height="80" patternUnits="userSpaceOnUse">
-      <text x="10" y="20" font-family="monospace" font-size="10" fill="#00F0FF" fill-opacity="0.15">01101001</text>
-      <text x="10" y="40" font-family="monospace" font-size="10" fill="#00F0FF" fill-opacity="0.08">10110010</text>
-      <text x="10" y="60" font-family="monospace" font-size="10" fill="#00F0FF" fill-opacity="0.2">11001011</text>
+    <pattern id="dots" width="15" height="15" patternUnits="userSpaceOnUse">
+      <circle cx="7.5" cy="7.5" r="0.8" fill="#0A3050" fill-opacity="0.5"/>
     </pattern>
+    <clipPath id="banner-clip"><rect width="1200" height="280" rx="8"/></clipPath>
   </defs>
-
   <style>
-    .pulse-glow { animation: pulse 3s infinite alternate; }
-    .scanline { animation: scan 8s linear infinite; }
-    .float-item { animation: float 4s ease-in-out infinite; }
-    @keyframes pulse {
-      0% { opacity: 0.4; }
-      100% { opacity: 0.9; }
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
-    }
+    @keyframes titlePulse{0%,100%{opacity:1}50%{opacity:.85}}
+    @keyframes eyeGlow{0%,100%{opacity:.9}50%{opacity:1}}
+    @keyframes eyeFlare{0%,100%{opacity:.3}50%{opacity:.9}}
+    @keyframes scanMove{0%{transform:translateY(-280px)}100%{transform:translateY(560px)}}
+    @keyframes statusBlink{0%,90%,100%{opacity:1}95%{opacity:0}}
+    @keyframes barFill100{0%{width:0}100%{width:78px}}
+    @keyframes barFill90{0%{width:0}100%{width:70px}}
+    @keyframes barFill85{0%{width:0}100%{width:66px}}
+    @keyframes barFill30{0%{width:0}100%{width:23px}}
+    @keyframes charAura{0%,100%{opacity:.08}50%{opacity:.2}}
+    @keyframes borderGlow{0%,100%{opacity:.5}50%{opacity:1}}
+    @keyframes cityFlicker{0%,90%,100%{opacity:.6}93%{opacity:.3}96%{opacity:.6}}
+    @keyframes rainDrop{0%{opacity:0;transform:translateY(-10px)}20%{opacity:.6}100%{opacity:0;transform:translateY(60px)}}
+    .title-anim{animation:titlePulse 3s ease-in-out infinite}
+    .eye-anim{animation:eyeGlow 2s ease-in-out infinite}
+    .flare-anim{animation:eyeFlare 1.5s ease-in-out infinite}
+    .scan-anim{animation:scanMove 5s linear infinite}
+    .status-anim{animation:statusBlink 3s ease-in-out infinite}
+    .b100a{animation:barFill100 1.5s ease-out forwards;animation-delay:.3s;width:0}
+    .b100b{animation:barFill100 1.5s ease-out forwards;animation-delay:.5s;width:0}
+    .b90{animation:barFill90 1.5s ease-out forwards;animation-delay:.7s;width:0}
+    .b85{animation:barFill85 1.5s ease-out forwards;animation-delay:.9s;width:0}
+    .b30{animation:barFill30 1.5s ease-out forwards;animation-delay:1.1s;width:0}
+    .aura-anim{animation:charAura 4s ease-in-out infinite}
+    .border-anim{animation:borderGlow 2.5s ease-in-out infinite}
+    .city-anim{animation:cityFlicker 8s ease-in-out infinite}
   </style>
-
-  <!-- Base Canvas -->
-  <rect width="1200" height="420" fill="url(#bg-grad)" rx="16"/>
-  <rect width="1200" height="420" fill="url(#cyber-grid)" rx="16"/>
-  <rect width="1200" height="420" fill="url(#binary-rain)" rx="16"/>
-
-  <!-- Glowing Corner Borders -->
-  <path d="M 20 60 L 20 20 L 60 20" fill="none" stroke="#00F0FF" stroke-width="3" filter="url(#glow-cyan)"/>
-  <path d="M 1180 60 L 1180 20 L 1140 20" fill="none" stroke="#00F0FF" stroke-width="3" filter="url(#glow-cyan)"/>
-  <path d="M 20 360 L 20 400 L 60 400" fill="none" stroke="#00F0FF" stroke-width="3" filter="url(#glow-cyan)"/>
-  <path d="M 1180 360 L 1180 400 L 1140 400" fill="none" stroke="#00F0FF" stroke-width="3" filter="url(#glow-cyan)"/>
-
-  <!-- Ambient Light Orbs -->
-  <circle cx="200" cy="120" r="150" fill="#00F0FF" opacity="0.08" filter="url(#glow-intense)"/>
-  <circle cx="1000" cy="300" r="180" fill="#7000FF" opacity="0.1" filter="url(#glow-intense)"/>
-
-  <!-- Left Side: Anime AI Mastermind HUD Silhouette Graphics -->
-  <g transform="translate(100, 70)">
-    <!-- Tech Circle Rings -->
-    <circle cx="110" cy="140" r="100" fill="none" stroke="#00F0FF" stroke-width="1.5" stroke-opacity="0.4" stroke-dasharray="8 6"/>
-    <circle cx="110" cy="140" r="115" fill="none" stroke="#7000FF" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="20 10"/>
-    <circle cx="110" cy="140" r="85" fill="none" stroke="#00F0FF" stroke-width="2" stroke-opacity="0.6"/>
-    
-    <!-- HUD Target Reticle -->
-    <line x1="10" y1="140" x2="210" y2="140" stroke="#00F0FF" stroke-opacity="0.2" stroke-width="1"/>
-    <line x1="110" y1="40" x2="110" y2="240" stroke="#00F0FF" stroke-opacity="0.2" stroke-width="1"/>
-
-    <!-- Anime Head / Mastermind Silhouette with Glowing Cyber Eye -->
-    <path d="M 70 210 Q 75 140 100 110 Q 110 80 130 90 Q 150 100 155 130 Q 160 160 165 210 Z" fill="#091428" stroke="#00F0FF" stroke-width="2" filter="url(#glow-cyan)"/>
-    <!-- Anime Hair Tufts Silhouette -->
-    <path d="M 85 110 Q 70 85 95 70 Q 115 55 135 65 Q 155 50 165 80 Q 175 100 155 115 Z" fill="#0D1626" stroke="#7000FF" stroke-width="1.5"/>
-    <!-- Glowing Eye HUD Lens -->
-    <circle cx="120" cy="118" r="6" fill="#00F0FF" filter="url(#glow-intense)"/>
-    <circle cx="120" cy="118" r="2" fill="#FFFFFF"/>
-    <line x1="126" y1="118" x2="150" y2="118" stroke="#00F0FF" stroke-width="1.5" filter="url(#glow-cyan)"/>
-    <text x="155" y="122" font-family="monospace" font-size="10" fill="#00F0FF" font-weight="bold">TARGET_LOCKED</text>
-  </g>
-
-  <!-- Right/Center Header Text & System Status -->
-  <!-- Top OS Bar Tag -->
-  <rect x="360" y="55" width="280" height="28" rx="6" fill="#00F0FF" fill-opacity="0.1" stroke="#00F0FF" stroke-width="1"/>
-  <text x="375" y="74" font-family="Consolas, monospace" font-size="12" fill="#00F0FF" font-weight="bold" letter-spacing="2">SYSTEM :: SANJAY_OS v2.6</text>
-
-  <!-- Main Name Title -->
-  <text x="360" y="160" font-family="'Segoe UI', Roboto, sans-serif" font-size="64" font-weight="900" fill="url(#text-grad)" filter="url(#glow-cyan)" letter-spacing="4">SANJAY G P</text>
-
-  <!-- Subtitle with Glowing Cyber Brackets -->
-  <text x="360" y="210" font-family="'Segoe UI', Roboto, monospace" font-size="20" font-weight="700" fill="#00F0FF" letter-spacing="3">
-    &lt; ARTIFICIAL INTELLIGENCE &amp; DATA SCIENCE /&gt;
-  </text>
-
-  <!-- Tags Pill Bar -->
-  <g transform="translate(360, 235)">
-    <!-- Tag 1 -->
-    <rect x="0" y="0" width="160" height="32" rx="16" fill="#0D1626" stroke="#00F0FF" stroke-width="1.5"/>
-    <circle cx="16" cy="16" r="4" fill="#00F0FF" filter="url(#glow-cyan)"/>
-    <text x="28" y="21" font-family="sans-serif" font-size="12" font-weight="600" fill="#E6EDF3">Machine Learning</text>
-
-    <!-- Tag 2 -->
-    <rect x="175" y="0" width="150" height="32" rx="16" fill="#0D1626" stroke="#7000FF" stroke-width="1.5"/>
-    <circle cx="191" cy="16" r="4" fill="#7000FF" filter="url(#glow-cyan)"/>
-    <text x="203" y="21" font-family="sans-serif" font-size="12" font-weight="600" fill="#E6EDF3">Deep Learning</text>
-
-    <!-- Tag 3 -->
-    <rect x="340" y="0" width="160" height="32" rx="16" fill="#0D1626" stroke="#00F0FF" stroke-width="1.5"/>
-    <circle cx="356" cy="16" r="4" fill="#00F0FF" filter="url(#glow-cyan)"/>
-    <text x="368" y="21" font-family="sans-serif" font-size="12" font-weight="600" fill="#E6EDF3">Computer Vision</text>
-  </g>
-
-  <!-- Status HUD Card in Banner Top Right -->
-  <g transform="translate(900, 50)" class="float-item">
-    <rect width="260" height="150" rx="12" fill="#0D1626" fill-opacity="0.8" stroke="#00F0FF" stroke-width="1.5" filter="url(#glow-cyan)"/>
-    
-    <!-- Card Header -->
-    <path d="M 0 0 L 260 0 L 260 30 L 0 30 Z" fill="#00F0FF" fill-opacity="0.15"/>
-    <text x="15" y="20" font-family="monospace" font-size="11" font-weight="bold" fill="#00F0FF">HUD :: SYSTEM STATUS</text>
-    <circle cx="240" cy="15" r="4" fill="#00FF66" filter="url(#glow-cyan)"/>
-
-    <!-- Stats Lines -->
-    <text x="15" y="55" font-family="monospace" font-size="11" fill="#8B949E">CORE_STATE:</text>
-    <text x="120" y="55" font-family="monospace" font-size="11" fill="#00F0FF" font-weight="bold">ONLINE</text>
-
-    <text x="15" y="78" font-family="monospace" font-size="11" fill="#8B949E">LOCATION:</text>
-    <text x="120" y="78" font-family="monospace" font-size="11" fill="#FFFFFF">INDIA 🇮🇳</text>
-
-    <text x="15" y="101" font-family="monospace" font-size="11" fill="#8B949E">PRIMARY_LANG:</text>
-    <text x="120" y="101" font-family="monospace" font-size="11" fill="#00F0FF">PYTHON / JAVA</text>
-
-    <text x="15" y="124" font-family="monospace" font-size="11" fill="#8B949E">MISSION:</text>
-    <text x="120" y="124" font-family="monospace" font-size="11" fill="#00FF66">SOLVE REAL PROBLEMS</text>
-  </g>
-
-  <!-- Mission Quote Box Bottom Center -->
-  <g transform="translate(360, 300)">
-    <rect width="780" height="75" rx="10" fill="#080D1A" fill-opacity="0.9" stroke="#7000FF" stroke-width="1.5"/>
-    <path d="M 0 0 L 10 0 L 0 10 Z" fill="#7000FF"/>
-    <text x="20" y="30" font-family="Consolas, monospace" font-size="13" fill="#00F0FF" font-style="italic">
-      "Building intelligent software that transforms raw data into real-world impact."
-    </text>
-    
-    <!-- Progress Indicator Bar -->
-    <text x="20" y="56" font-family="monospace" font-size="11" fill="#8B949E">SYSTEM EVOLUTION [2026 ROADMAP]:</text>
-    <rect x="260" y="46" width="400" height="12" rx="6" fill="#161B22"/>
-    <rect x="260" y="46" width="310" height="12" rx="6" fill="url(#neon-cyan)" filter="url(#glow-cyan)"/>
-    <text x="670" y="56" font-family="monospace" font-size="11" fill="#00F0FF" font-weight="bold">77.5%</text>
+  <g clip-path="url(#banner-clip)">
+    <rect width="1200" height="280" fill="url(#bg-main)"/>
+    <rect width="1200" height="280" fill="url(#grid)" opacity="0.5"/>
+    <!-- City skyline -->
+    <g class="city-anim">
+      <rect x="0" y="60" width="12" height="220" fill="#061220"/>
+      <rect x="14" y="40" width="20" height="240" fill="#071525"/>
+      <rect x="36" y="70" width="14" height="210" fill="#061018"/>
+      <rect x="52" y="30" width="18" height="250" fill="#081828"/>
+      <rect x="72" y="55" width="16" height="225" fill="#071422"/>
+      <rect x="90" y="20" width="25" height="260" fill="#091828"/>
+      <rect x="117" y="45" width="14" height="235" fill="#070F1A"/>
+      <rect x="133" y="65" width="20" height="215" fill="#081520"/>
+      <rect x="155" y="35" width="16" height="245" fill="#091A2A"/>
+      <rect x="173" y="50" width="22" height="230" fill="#071220"/>
+      <rect x="197" y="25" width="18" height="255" fill="#08182A"/>
+      <rect x="217" y="60" width="15" height="220" fill="#061015"/>
+      <rect x="234" y="40" width="24" height="240" fill="#091A28"/>
+      <rect x="260" y="30" width="16" height="250" fill="#07141E"/>
+      <rect x="278" y="55" width="20" height="225" fill="#081828"/>
+      <rect x="16" y="55" width="2" height="2" fill="#1A4060" opacity="0.7"/>
+      <rect x="55" y="45" width="2" height="2" fill="#1A4878" opacity="0.8"/>
+      <rect x="93" y="35" width="2" height="2" fill="#1A4878" opacity="0.7"/>
+      <rect x="140" y="75" width="2" height="2" fill="#1A4060" opacity="0.6"/>
+      <rect x="200" y="38" width="2" height="2" fill="#1A4878" opacity="0.7"/>
+      <rect x="263" y="44" width="2" height="2" fill="#1A4878" opacity="0.7"/>
+    </g>
+    <ellipse cx="60" cy="280" rx="120" ry="60" fill="#003060" opacity="0.3" filter="url(#glow-soft)"/>
+    <!-- Character aura -->
+    <ellipse cx="175" cy="200" rx="100" ry="90" fill="#003B6F" opacity="0.12" class="aura-anim"/>
+    <!-- Body / jacket -->
+    <path d="M 70 280 L 80 200 Q 100 175 130 165 L 175 160 L 220 165 Q 250 175 268 200 L 278 280 Z" fill="#060E18" stroke="#0A1E30" stroke-width="1.5"/>
+    <path d="M 140 165 L 155 200 L 175 210 L 195 200 L 210 165" fill="none" stroke="#0D2235" stroke-width="2"/>
+    <path d="M 162 168 L 175 185 L 188 168" fill="#0D2030" stroke="#122840" stroke-width="1"/>
+    <!-- Neck -->
+    <rect x="162" y="140" width="26" height="28" fill="#10202E" rx="4"/>
+    <!-- Head -->
+    <ellipse cx="175" cy="110" rx="48" ry="52" fill="#0B1928"/>
+    <path d="M 140 110 Q 140 85 175 80 Q 210 85 210 110 Q 210 145 195 162 Q 175 172 155 162 Q 140 148 140 110 Z" fill="#0F2030"/>
+    <!-- Hair -->
+    <ellipse cx="175" cy="75" rx="52" ry="42" fill="#050C14"/>
+    <path d="M 128 90 Q 122 60 140 45 Q 130 65 145 78" fill="#040A10"/>
+    <path d="M 138 75 Q 132 40 155 30 Q 145 55 158 72" fill="#050C14"/>
+    <path d="M 155 68 Q 155 35 175 25 Q 170 52 172 68" fill="#060E18"/>
+    <path d="M 175 65 Q 178 32 195 28 Q 188 55 188 68" fill="#060E18"/>
+    <path d="M 188 70 Q 198 40 215 42 Q 206 60 202 73" fill="#050C14"/>
+    <path d="M 200 78 Q 215 50 228 58 Q 218 72 212 82" fill="#040A10"/>
+    <path d="M 140 90 Q 148 78 160 85 Q 155 95 145 98" fill="#050C14"/>
+    <path d="M 155 82 Q 165 72 175 78 Q 172 90 163 94" fill="#060E18"/>
+    <path d="M 170 78 Q 180 70 190 76 Q 188 88 180 92" fill="#060E18"/>
+    <path d="M 188 82 Q 198 76 207 82 Q 202 92 195 95" fill="#050C14"/>
+    <path d="M 130 100 Q 124 115 127 135 Q 130 105 138 100" fill="#040A10"/>
+    <path d="M 220 100 Q 226 115 223 135 Q 220 105 212 100" fill="#040A10"/>
+    <!-- Left eye subtle -->
+    <path d="M 148 108 Q 155 105 162 108" stroke="#1A3D55" stroke-width="1.5" fill="none"/>
+    <!-- Right GLOWING eye -->
+    <ellipse cx="192" cy="107" rx="11" ry="8" fill="#03101C"/>
+    <circle cx="192" cy="107" r="5.5" fill="#00507A" filter="url(#glow-eye)"/>
+    <circle cx="192" cy="107" r="4" fill="#0088BB" filter="url(#glow-eye)" class="eye-anim"/>
+    <circle cx="192" cy="107" r="2.5" fill="#00CCEE" filter="url(#glow-eye)"/>
+    <circle cx="192" cy="107" r="1.2" fill="#FFFFFF"/>
+    <circle cx="189" cy="105" r="1.2" fill="#AAEEFF" opacity="0.9"/>
+    <ellipse cx="192" cy="107" rx="18" ry="10" fill="#0055AA" opacity="0.15" filter="url(#glow-eye)" class="flare-anim"/>
+    <path d="M 182 103 Q 192 100 202 103" stroke="#0A1E2E" stroke-width="2" fill="none"/>
+    <path d="M 183 112 Q 192 115 201 112" stroke="#0A1E2E" stroke-width="1.5" fill="none"/>
+    <!-- Nose / Mouth -->
+    <path d="M 178 120 Q 178 128 175 130" stroke="#0A1825" stroke-width="1.2" fill="none"/>
+    <path d="M 165 142 Q 175 145 185 142" stroke="#0B1E2E" stroke-width="1.5" fill="none"/>
+    <!-- Character right fade -->
+    <rect x="0" y="0" width="310" height="280" fill="url(#char-fade)"/>
+    <!-- Left text panel -->
+    <text x="18" y="38" font-family="monospace" font-size="8.5" fill="#336688" font-style="italic">The strongest people</text>
+    <text x="18" y="50" font-family="monospace" font-size="8.5" fill="#336688" font-style="italic">rarely need to prove</text>
+    <text x="18" y="62" font-family="monospace" font-size="8.5" fill="#336688" font-style="italic">they're the strongest.</text>
+    <text x="18" y="222" font-family="monospace" font-size="10" fill="#2A7099">ようこそ至力至上主義の教室へ</text>
+    <text x="18" y="237" font-family="monospace" font-size="9" fill="#1E5570">Classroom of the Elite</text>
+    <!-- Borders and corners -->
+    <line x1="0" y1="3" x2="1200" y2="3" stroke="#00AACC" stroke-width="1.5" opacity="0.6" class="border-anim"/>
+    <line x1="0" y1="277" x2="1200" y2="277" stroke="#00AACC" stroke-width="1.5" opacity="0.5"/>
+    <line x1="3" y1="0" x2="3" y2="280" stroke="#00AACC" stroke-width="1" opacity="0.3"/>
+    <line x1="1197" y1="0" x2="1197" y2="280" stroke="#00AACC" stroke-width="1" opacity="0.3"/>
+    <path d="M 3 3 L 25 3 M 3 3 L 3 22" stroke="#00DDFF" stroke-width="2" fill="none" opacity="0.8"/>
+    <path d="M 1197 3 L 1175 3 M 1197 3 L 1197 22" stroke="#00DDFF" stroke-width="2" fill="none" opacity="0.8"/>
+    <path d="M 3 277 L 25 277 M 3 277 L 3 258" stroke="#00DDFF" stroke-width="2" fill="none" opacity="0.8"/>
+    <path d="M 1197 277 L 1175 277 M 1197 277 L 1197 258" stroke="#00DDFF" stroke-width="2" fill="none" opacity="0.8"/>
+    <!-- CENTER: Main Title -->
+    <text x="595" y="120" font-family="Arial Black, sans-serif" font-weight="900" font-size="70" fill="url(#title-glow)" filter="url(#glow-title)" text-anchor="middle" letter-spacing="6" class="title-anim">SANJAY G P</text>
+    <line x1="330" y1="132" x2="855" y2="132" stroke="#00AACC" stroke-width="0.8" opacity="0.5"/>
+    <circle cx="330" cy="132" r="2" fill="#00CCEE" opacity="0.7"/>
+    <circle cx="855" cy="132" r="2" fill="#00CCEE" opacity="0.7"/>
+    <text x="595" y="158" font-family="Courier New, monospace" font-size="15" fill="#00CCEE" text-anchor="middle" letter-spacing="3">&lt; AI &amp; DATA SCIENCE STUDENT /&gt;</text>
+    <line x1="420" y1="170" x2="770" y2="170" stroke="#1A4466" stroke-width="0.8" opacity="0.5"/>
+    <text x="595" y="196" font-family="Courier New, monospace" font-size="10.5" fill="#4499BB" text-anchor="middle" letter-spacing="2.5">ARTIFICIAL INTELLIGENCE  •  MACHINE LEARNING  •  SOFTWARE DEVELOPMENT</text>
+    <line x1="440" y1="208" x2="750" y2="208" stroke="#1A4466" stroke-width="0.8" opacity="0.5"/>
+    <text x="595" y="230" font-family="Courier New, monospace" font-size="12" fill="#88BBCC" text-anchor="middle" font-style="italic">"Learning Never Stops."</text>
+    <!-- HUD Panel -->
+    <rect x="875" y="20" width="305" height="240" rx="6" fill="url(#panel-bg)" stroke="#00AACC" stroke-width="1" opacity="0.95"/>
+    <rect x="875" y="20" width="305" height="28" rx="6" fill="#001828" opacity="0.9"/>
+    <line x1="875" y1="48" x2="1180" y2="48" stroke="#00AACC" stroke-width="0.8" opacity="0.6"/>
+    <text x="895" y="39" font-family="Courier New, monospace" font-size="11" fill="#00BBDD" letter-spacing="1.5">·SYSTEM STATUS</text>
+    <!-- Intelligence -->
+    <text x="895" y="72" font-family="Courier New, monospace" font-size="9.5" fill="#7FAACC">Intelligence :</text>
+    <rect x="985" y="63" width="80" height="8" rx="2" fill="#021420"/>
+    <rect x="985" y="63" height="8" rx="2" fill="url(#bar-grad)" class="b100a"/>
+    <text x="1072" y="72" font-family="Courier New, monospace" font-size="9" fill="#00DDFF">100%</text>
+    <!-- Discipline -->
+    <text x="895" y="98" font-family="Courier New, monospace" font-size="9.5" fill="#7FAACC">Discipline  :</text>
+    <rect x="985" y="89" width="80" height="8" rx="2" fill="#021420"/>
+    <rect x="985" y="89" height="8" rx="2" fill="url(#bar-grad)" class="b100b"/>
+    <text x="1072" y="98" font-family="Courier New, monospace" font-size="9" fill="#00DDFF">100%</text>
+    <!-- Focus -->
+    <text x="895" y="124" font-family="Courier New, monospace" font-size="9.5" fill="#7FAACC">Focus       :</text>
+    <rect x="985" y="115" width="80" height="8" rx="2" fill="#021420"/>
+    <rect x="985" y="115" height="8" rx="2" fill="url(#bar-grad)" class="b90"/>
+    <text x="1072" y="124" font-family="Courier New, monospace" font-size="9" fill="#00DDFF">90%</text>
+    <!-- Creativity -->
+    <text x="895" y="150" font-family="Courier New, monospace" font-size="9.5" fill="#7FAACC">Creativity  :</text>
+    <rect x="985" y="141" width="80" height="8" rx="2" fill="#021420"/>
+    <rect x="985" y="141" height="8" rx="2" fill="url(#bar-grad)" class="b85"/>
+    <text x="1072" y="150" font-family="Courier New, monospace" font-size="9" fill="#00DDFF">85%</text>
+    <!-- Sleep -->
+    <text x="895" y="176" font-family="Courier New, monospace" font-size="9.5" fill="#7FAACC">Sleep       :</text>
+    <rect x="985" y="167" width="80" height="8" rx="2" fill="#021420"/>
+    <rect x="985" y="167" height="8" rx="2" fill="url(#bar-red)" class="b30"/>
+    <text x="1072" y="176" font-family="Courier New, monospace" font-size="9" fill="#00DDFF">30%</text>
+    <line x1="892" y1="195" x2="1163" y2="195" stroke="#0A2840" stroke-width="1"/>
+    <!-- Status Online -->
+    <circle cx="904" cy="218" r="6" fill="#00FF66" class="status-anim" filter="url(#glow-soft)"/>
+    <circle cx="904" cy="218" r="3" fill="#AAFFCC"/>
+    <text x="918" y="222" font-family="Courier New, monospace" font-size="13" fill="#00FF66" font-weight="bold" filter="url(#glow-soft)">STATUS: ONLINE</text>
+    <rect x="875" y="20" width="305" height="240" fill="url(#dots)" rx="6" opacity="0.4"/>
+    <!-- Scan line effect -->
+    <rect x="0" y="0" width="1200" height="6" fill="white" opacity="0.04" class="scan-anim"/>
   </g>
 </svg>
