@@ -7,7 +7,7 @@
 
   <!-- HERO BANNER -->
   <a href="https://github.com/sanjaygp-22">
-    <img src="assets/banner.png" width="100%" alt="SANJAY_OS Hero Banner"/>
+    <img src="assets/banner.svg" width="100%" alt="SANJAY_OS Hero Banner"/>
   </a>
 
   <br/><br/>
