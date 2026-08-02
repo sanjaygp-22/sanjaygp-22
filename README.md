@@ -53,15 +53,46 @@
   <img src="assets/terminal_header.svg" width="100%" alt="Terminal Header"/>
 </div>
 
-```text
-               ▄▄▄▄▄▄▄   ▄▄▄▄▄▄▄   ▄▄    ▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄  ▄▄▄   ▄▄ 
-              █       █ █       █ █  █  █  █   ▄   █   ▄  ██   █ █  █
-              █  ▄▄▄▄▄█ █   ▄   █ █   █▄█  █  █ █  █  █ █  █   █▄█  █
-              █ █▄▄▄▄▄  █  █ █  █ █       ██  █▄█  █  █▄█  █      █ █
-              █▄▄▄▄▄  █ █  █▄█  █ █  ▄    ██   ▄   █   ▄   █  ▄   █ █
-               ▄▄▄▄▄█ █ █   █   █ █ █ █   ██  █ █  █  █ █  █ █ █  █ █
-              █▄▄▄▄▄▄▄█ █▄▄█ █▄▄█ █▄█  █▄▄██▄▄█ █▄▄█▄▄█ █▄▄█▄█  █▄▄█ 
-```
+<div align="center">
+  <table width="460" style="border: 1.5px solid #00F0FF; border-radius: 12px; background: #07111E; padding: 18px;">
+    <tr>
+      <td>
+        <!-- Header -->
+        <div align="left">
+          <span style="color: #00F0FF; font-family: monospace; font-size: 14px; font-weight: bold; letter-spacing: 1.5px;">
+            🤖 VISITOR COUNTER
+          </span>
+        </div>
+        
+        <hr style="border: 0.5px solid #00F0FF; opacity: 0.3; margin: 10px 0;"/>
+
+        <!-- Body -->
+        <div align="center">
+          <p style="color: #E6EDF3; font-family: monospace; font-size: 13px; margin: 5px 0 12px 0;">
+            Thanks for visiting!
+          </p>
+          
+          <!-- Odometer Counter & Pulse Wave -->
+          <table width="100%">
+            <tr>
+              <td align="center">
+                <a href="https://github.com/sanjaygp-22">
+                  <img src="https://profile-counter.glitch.me/sanjaygp-22/count.svg" height="48" alt="Visitor Counter"/>
+                </a>
+              </td>
+            </tr>
+          </table>
+
+          <p style="color: #00F0FF; font-family: monospace; font-size: 11px; margin-top: 10px; letter-spacing: 1px;">
+            Total Visitors
+          </p>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<br/>
 
 ```bash
 user@sanjaygp-22:~$ ./init_system.sh --boot-sequence
