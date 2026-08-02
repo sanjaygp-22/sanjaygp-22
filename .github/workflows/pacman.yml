@@ -1,0 +1,46 @@
+name: Generate Pac-Man & Snake Contribution Graph
+
+on:
+  # Run automatically every 24 hours at midnight UTC
+  schedule:
+    - cron: "0 0 * * *"
+  
+  # Allows manual workflow dispatch trigger from the Actions tab
+  workflow_dispatch:
+  
+  # Run on every push to main or master branch
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      # Step 1: Checkout repository
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Step 2: Generate Snake / Pacman Contribution Animation SVG
+      - name: Generate Contribution Grid Animation
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#00F0FF&color_dots=#161B22,#0E4429,#006D32,#26A641,#39D353
+            dist/github-contribution-grid-snake-cyberpunk.svg?palette=github-dark&color_snake=#00F0FF&color_dots=#0D1117,#003B46,#007577,#00E5FF,#00F0FF
+
+      # Step 3: Deploy SVGs to the 'output' branch
+      - name: Push SVGs to Output Branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
