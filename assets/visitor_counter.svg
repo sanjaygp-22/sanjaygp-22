@@ -123,28 +123,28 @@
     <g transform="translate(186, 75)">
       <rect width="36" height="48" rx="6" fill="url(#box-bg)" stroke="#00F0FF" stroke-width="1.2"/>
       <line x1="0" y1="24" x2="36" y2="24" stroke="#040D18" stroke-width="1.5"/>
-      <text x="18" y="34" font-family="'Consolas', 'Courier New', monospace" font-size="28" font-weight="900" fill="#00F0FF" filter="url(#glow-strong)" text-anchor="middle" class="num-glow">5</text>
+      <text x="18" y="34" font-family="'Consolas', 'Courier New', monospace" font-size="28" font-weight="900" fill="#00F0FF" filter="url(#glow-strong)" text-anchor="middle" class="num-glow">0</text>
     </g>
 
     <!-- Box 5 -->
     <g transform="translate(228, 75)">
       <rect width="36" height="48" rx="6" fill="url(#box-bg)" stroke="#00F0FF" stroke-width="1.2"/>
       <line x1="0" y1="24" x2="36" y2="24" stroke="#040D18" stroke-width="1.5"/>
-      <text x="18" y="34" font-family="'Consolas', 'Courier New', monospace" font-size="28" font-weight="900" fill="#00F0FF" filter="url(#glow-strong)" text-anchor="middle" class="num-glow">4</text>
+      <text x="18" y="34" font-family="'Consolas', 'Courier New', monospace" font-size="28" font-weight="900" fill="#00F0FF" filter="url(#glow-strong)" text-anchor="middle" class="num-glow">0</text>
     </g>
 
     <!-- Box 6 -->
     <g transform="translate(270, 75)">
       <rect width="36" height="48" rx="6" fill="url(#box-bg)" stroke="#00F0FF" stroke-width="1.2"/>
       <line x1="0" y1="24" x2="36" y2="24" stroke="#040D18" stroke-width="1.5"/>
-      <text x="18" y="34" font-family="'Consolas', 'Courier New', monospace" font-size="28" font-weight="900" fill="#00F0FF" filter="url(#glow-strong)" text-anchor="middle" class="num-glow">4</text>
+      <text x="18" y="34" font-family="'Consolas', 'Courier New', monospace" font-size="28" font-weight="900" fill="#00F0FF" filter="url(#glow-strong)" text-anchor="middle" class="num-glow">2</text>
     </g>
 
     <!-- Box 7 -->
     <g transform="translate(312, 75)">
       <rect width="36" height="48" rx="6" fill="url(#box-bg)" stroke="#00F0FF" stroke-width="1.2"/>
       <line x1="0" y1="24" x2="36" y2="24" stroke="#040D18" stroke-width="1.5"/>
-      <text x="18" y="34" font-family="'Consolas', 'Courier New', monospace" font-size="28" font-weight="900" fill="#00F0FF" filter="url(#glow-strong)" text-anchor="middle" class="num-glow">6</text>
+      <text x="18" y="34" font-family="'Consolas', 'Courier New', monospace" font-size="28" font-weight="900" fill="#00F0FF" filter="url(#glow-strong)" text-anchor="middle" class="num-glow">0</text>
     </g>
 
     <!-- 4. ANIMATED ECG PULSE WAVE GRAPHIC (Right side) -->
