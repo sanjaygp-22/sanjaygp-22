@@ -59,7 +59,7 @@
     <font color="#00F0FF" size="3"><b>🤖 VISITOR COUNTER</b></font><br/>
     <font color="#8B949E" size="2">Thanks for visiting!</font><br/><br/>
     <a href="https://github.com/sanjaygp-22">
-      <img src="https://profile-counter.glitch.me/sanjaygp-22/count.svg" height="48" alt="Visitor Counter"/>
+      <img src="https://komarev.com/ghpvc/?username=sanjaygp-22&color=00F0FF&style=for-the-badge&label=TOTAL+VISITORS" height="45" alt="Visitor Counter"/>
     </a><br/><br/>
     <font color="#00F0FF" size="2"><b>Total Visitors</b></font>
   </p>
