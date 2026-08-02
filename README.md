@@ -55,7 +55,7 @@
 
 <div align="center">
   <a href="https://github.com/sanjaygp-22">
-    <img src="https://raw.githubusercontent.com/sanjaygp-22/sanjaygp-22/main/assets/visitor_counter.svg?v=3" width="540" alt="Animated Visitor Counter Card"/>
+    <img src="assets/counter_card.svg" width="540" alt="Animated Visitor Counter Card"/>
   </a>
 </div>
 
