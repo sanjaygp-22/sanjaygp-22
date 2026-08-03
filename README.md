@@ -263,7 +263,7 @@ Technologies and tools integrated into my daily development workflow:
   <!-- GitHub Stats & Streak -->
   <p align="center">
     <a href="https://github.com/sanjaygp-22">
-      <img src="https://github-readme-stats.vercel.app/api?username=sanjaygp-22&show_icons=true&theme=dark&hide_border=false&border_color=00F0FF&bg_color=0D1117&title_color=00F0FF&icon_color=00F0FF&text_color=E6EDF3" height="170" alt="GitHub Stats"/>
+      <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=sanjaygp-22&show_icons=true&theme=dark&hide_border=false&border_color=00F0FF&bg_color=0D1117&title_color=00F0FF&icon_color=00F0FF&text_color=E6EDF3" height="170" alt="GitHub Stats"/>
     </a>
     <a href="https://github.com/sanjaygp-22">
       <img src="https://github-readme-streak-stats.herokuapp.com/?user=sanjaygp-22&theme=dark&hide_border=false&border_color=00F0FF&background=0D1117&ring=00F0FF&fire=00F0FF&currStreakNum=E6EDF3" height="170" alt="GitHub Streak"/>
@@ -275,7 +275,7 @@ Technologies and tools integrated into my daily development workflow:
   <!-- Top Languages & Activity Graph -->
   <p align="center">
     <a href="https://github.com/sanjaygp-22">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sanjaygp-22&layout=compact&theme=dark&hide_border=false&border_color=00F0FF&bg_color=0D1117&title_color=00F0FF&text_color=E6EDF3" height="165" alt="Top Languages"/>
+      <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=sanjaygp-22&layout=compact&theme=dark&hide_border=false&border_color=00F0FF&bg_color=0D1117&title_color=00F0FF&text_color=E6EDF3" height="165" alt="Top Languages"/>
     </a>
     <a href="https://github.com/sanjaygp-22">
       <img src="https://github-readme-activity-graph.vercel.app/graph?username=sanjaygp-22&theme=react-dark&bg_color=0D1117&color=00F0FF&line=00F0FF&point=7000FF&hide_border=false&border_color=00F0FF" height="165" alt="Activity Graph"/>
@@ -284,11 +284,11 @@ Technologies and tools integrated into my daily development workflow:
 
   <br/>
 
-  <!-- GitHub Trophies -->
+  <!-- Verified Achievements Showcase -->
   <p align="center">
-    <a href="https://github.com/sanjaygp-22">
-      <img src="https://github-profile-trophy.vercel.app/?username=sanjaygp-22&theme=darkhub&column=6&margin-w=15&margin-h=15&no-bg=false&no-frame=false&border=00F0FF" width="100%" alt="GitHub Trophies"/>
-    </a>
+    <img src="https://img.shields.io/badge/🏆_ACHIEVEMENTS-ACTIVE_AI_&_DS_DEVELOPER-00F0FF?style=for-the-badge&labelColor=0D1626" alt="Achievements"/>
+    <img src="https://img.shields.io/badge/⚡_STREAK-DAILY_COMMITS-7000FF?style=for-the-badge&labelColor=0D1626" alt="Streak"/>
+    <img src="https://img.shields.io/badge/⭐_VERIFIED-GITHUB_CONTRIBUTOR-00FF66?style=for-the-badge&labelColor=0D1626" alt="Verified"/>
   </p>
 
 </div>
@@ -304,7 +304,7 @@ Technologies and tools integrated into my daily development workflow:
 Automated daily contribution graph powered by GitHub Actions:
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/sanjaygp-22/sanjaygp-22/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Pacman Snake Contribution Graph"/>
+  <img src="https://raw.githubusercontent.com/sanjaygp-22/sanjaygp-22/output/github-contribution-grid-snake-dark.svg?v=2" width="100%" alt="Pacman Snake Contribution Graph"/>
 </div>
 
 <br/>
