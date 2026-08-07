@@ -123,7 +123,7 @@ Welcome to my digital neural network. I am an **Artificial Intelligence & Data S
       </ul>
     </td>
     <td width="50%" valign="top">
-      <h3>💻 संजय_OS // SanjayGP.java</h3>
+      <h3>💻 SanjayGP.java</h3>
       <pre><code>public class SanjayGP extends Developer implements AIStudent {
     
     private final String name = "Sanjay G P";
@@ -299,7 +299,7 @@ Technologies and tools integrated into my daily development workflow:
 <!-- PAC-MAN CONTRIBUTION GRAPH                                                -->
 <!-- ========================================================================= -->
 
-### 👾 PAC-MAN CONTRIBUTION GRAPH
+### 👾 SNAKE CONTRIBUTION GRAPH
 
 Automated daily contribution graph powered by GitHub Actions:
 
